@@ -188,7 +188,7 @@ const projectData = {
     2024: {
 
         image:
-            "img/project2024.png",
+            "img/project2024.jpg",
 
         text: `
             <h2>
