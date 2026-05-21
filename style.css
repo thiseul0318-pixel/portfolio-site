@@ -1,0 +1,626 @@
+@font-face {
+    font-family: "Cafe24 Ohsquare OTF";
+    src: url("fonts/Cafe24OhsquareOTF.otf") format("opentype");
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFEED7;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 맨 위 파란 바 */
+
+.top-bar{
+    background:#389DE5;
+    color:white;
+    padding:14px 20px;
+    font-size:20px;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: normal;
+}
+
+/* header */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px 60px;
+}
+
+/* 로고 */
+
+.logo{
+    font-family: "Rubik Spray Paint", cursive;
+    font-size:50px;
+    letter-spacing:1px;
+    color:#389DE5;
+    font-weight:normal;
+}
+
+/* 메뉴 */
+
+.nav ul{
+    display:flex;
+    gap:50px;
+    list-style:none;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#389DE5;
+    font-family: "Protest Strike", sans-serif;
+    font-size:28px;
+    font-weight:normal;
+}
+
+/* 메인 영상 */
+
+.main-video{
+    padding:40px 0 120px;
+}
+
+.video-box{
+    width:100%;
+    max-width:1000px;
+    height:500px;
+    margin:0 auto;
+    background:#B9B9B9;
+    border-radius:20px;
+    overflow:hidden; /* 넘치는 부분 숨김 */
+}
+
+.video-box video{
+    width:100%;
+    height:100%;
+    object-fit:cover; /* 박스 꽉 채우기 */
+    display:block;
+}
+
+/* 슬로건 구간 */
+
+.slogan{
+    background:#389DE5;
+    color:white;
+    text-align:center;
+    padding:0 20px;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* 슬로건 문장 */
+
+.slogan p{
+    font-family:"Cafe24 Ohsquare OTF", sans-serif;
+    font-size:30px;
+    line-height:1.7;
+    max-width:900px;
+    margin:0 auto;
+    position:relative;
+}
+
+/* 왼쪽 따옴표 */
+
+.slogan p::before{
+    content:"“";
+    position:absolute;
+    left:-100px;
+    top:-20px;
+    font-size:80px;
+    color:white;
+    font-family:"Rubik Spray Paint", cursive;
+}
+
+/* 오른쪽 따옴표 */
+
+.slogan p::after{
+    content:"”";
+    position:absolute;
+    right:-100px;
+    bottom:-40px;
+    font-size:80px;
+    color:white;
+    font-family:"Rubik Spray Paint", cursive;
+}
+
+/* Creative 영역 */
+
+.creative{
+    padding:120px 40px;
+    background:#FFEED7;
+}
+
+/* 제목 */
+
+.section-title{
+    text-align:center;
+    font-size:36px;
+    color:#389DE5;
+    margin-bottom:80px;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: normal;
+}
+
+/* 카드 컨테이너 */
+
+.card-container{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    overflow:hidden;
+    width:1120px;
+    margin:0 auto;
+    height:520px; 
+    scroll-behavior:smooth;
+    position:relative;
+}
+
+/* 기본 카드 */
+
+.card{
+    width:220px;
+    flex-shrink:0;
+    transition:0.6s ease;
+}
+
+/* active 카드 */
+
+.card.active{
+    width:320px;
+}
+
+/* 이미지 */
+
+.card-image{
+    width:100%;
+    height:320px;
+    background:#389DE5;
+    border-radius:20px;
+    overflow:hidden; /* 넘치는 이미지 숨김 */
+    transition:0.6s;
+}
+
+/* 이미지 자체 설정 */
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover; /* 박스에 맞게 꽉 채움 */
+    display:block;
+}
+
+/* active 이미지 */
+.card.active .card-image{
+    height:420px;
+}
+
+/* 텍스트 */
+
+.card-text{
+    margin-top:15px;
+    font-size:14px;
+    text-align:center;
+}
+
+/* 연도별 프로젝트 영역 */
+
+.year-project{
+    padding:120px 40px 230px;
+    background:#FFEED7;
+}
+
+.year-tabs{
+    width:1100px;
+    margin:0 auto 80px;
+    background:#389DE5;
+    border-radius:50px;
+    padding:8px;
+    display:flex;
+    justify-content:center;
+    gap:80px;
+}
+
+.year-btn{
+    flex:0;
+    border:none;
+    background:transparent;
+    color:white;
+    font-size:24px;
+    font-family:"Protest Strike", sans-serif;
+    padding:10px 70px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.year-btn.active{
+    background:#FF6B8A;
+}
+
+/* 콘텐츠 */
+
+.year-content{
+    width:1120px;
+    margin:0 auto;
+    display:flex;
+    gap:80px;
+    align-items:flex-start;
+}
+
+/* 이미지 */
+
+.year-image{
+    width:420px;
+    height:520px;
+    background:#B9B9B9;
+    border-radius:30px;
+    border:4px solid #389DE5;
+    flex-shrink:0;
+}
+
+/* 텍스트 */
+
+.year-text{
+    flex:1;
+}
+
+/* 텍스트 문단 */
+
+
+.year-text h2{
+    font-size:25px;
+    margin-bottom:28px;
+    font-weight:700;
+    color:#222;
+}
+
+.year-text p{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:24px;
+}
+
+/* Design 영역 */
+
+.design{
+    background:#389DE5;
+    color:white;
+    padding:120px 40px;
+    text-align:center;
+}
+
+/* 제목 */
+
+.design-title{
+    font-size:36px;
+    font-family:"Protest Strike", sans-serif;
+    font-weight: normal;
+    margin-bottom:10px;
+}
+
+/* Design 슬로건 구간 */
+
+.design-slogan{
+    color:white;
+    text-align:center;
+    padding:40px 20px 100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 100px;
+}
+
+/* 문장 */
+
+.design-slogan p{
+    font-family:"Cafe24 Ohsquare OTF", sans-serif;
+    font-size:26px;
+    line-height:1.7;
+    max-width:900px;
+    margin:0 auto;
+    position:relative;
+}
+
+/* 왼쪽 따옴표 */
+
+.design-slogan p::before{
+    content:"“";
+    position:absolute;
+    left:-100px;
+    top:-50px;
+    font-size:80px;
+    color:white;
+    font-family:"Rubik Spray Paint", cursive;
+}
+
+/* 오른쪽 따옴표 */
+
+.design-slogan p::after{
+    content:"”";
+    position:absolute;
+    right:-100px;
+    bottom:-40px;
+    font-size:80px;
+    color:white;
+    font-family:"Rubik Spray Paint", cursive;
+}
+
+/* 소제목 */
+
+.design-subtitle{
+    font-size:34px;
+    margin-bottom:10px;
+    font-family:"Protest Strike", sans-serif;
+    font-weight: normal;
+    margin-top:120px;
+}
+
+/* 설명 */
+
+.design-subtext{
+    margin-bottom:50px;
+}
+
+/* 이미지 그리드 */
+
+.design-inner{
+    width:1120px;
+    margin:0 auto;
+}
+
+.design-grid{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.design-row{
+    display:flex;
+    gap:24px;
+
+    width:100%;
+    justify-content:center;
+}
+
+.design-row.bottom .square:first-of-type{
+    margin-left:80px;
+}
+
+.design-item{
+    height:auto;
+    display:block;
+    border-radius:10px;
+    width:160px;
+}
+
+/* 세로형 */
+
+.vertical{
+    aspect-ratio: 3 / 4;
+}
+
+/* 정사각형 */
+
+.square{
+    width:220px;
+    aspect-ratio: 1 / 1;
+}
+
+/* 가로형 */
+
+.horizontal{
+    width:320px;
+    aspect-ratio: 16 / 10;
+}
+
+.horizontal.long{
+    width:380px;
+}
+
+.design-item:hover{
+    transform:scale(1.05);
+}
+
+/* 모달 */
+
+.image-modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+/* 열렸을 때 */
+
+.image-modal.show{
+    display:flex;
+}
+
+/* 확대 이미지 */
+
+.modal-image{
+    max-width:80%;
+    max-height:80%;
+    border-radius:16px;
+}
+
+
+/* Product Design 박스 */
+
+.product-box{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:80px;
+}
+
+/* 이미지 */
+
+.product-image{
+    width:100%;
+    max-width:900px;
+    height:auto;
+    display:block;
+    border-radius:16px;
+}
+
+/* Video 영역 */
+
+.video{
+    padding:120px 40px;
+    background:#FFEED7;
+    text-align:center;
+}
+
+/* 제목 */
+
+.video-title{
+    font-size:40px;
+    color:#389DE5;
+    font-family:"Protest Strike", sans-serif;
+    font-weight: normal;
+    margin-bottom:60px;
+}
+
+/* 메인 영상 */
+
+.video-main{
+    display:flex;
+    justify-content:center;
+}
+
+/* 공통 비디오 박스 */
+
+.video-wrapper{
+    width:100%;
+    max-width:900px;
+    aspect-ratio: 16 / 9;
+    height:auto;    
+    background:#B9B9B9;
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* 작은 영상 */
+
+.video-wrapper.small{
+    width:260px;
+    aspect-ratio: 9 / 16;
+    border-radius:16px;
+}
+
+/* 실제 video / iframe 자동 맞춤 */
+
+.video-wrapper video,
+.video-wrapper iframe{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border:none;
+}
+
+/* ▶ 아이콘 */
+
+.video-wrapper::after{
+    /* content:"▶"; */
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:40px;
+    color:#FFEED7;
+    pointer-events:none; /* 추가 */
+}
+
+/* 설명 */
+
+.video-desc{
+    margin-top:40px;
+}
+
+.video-desc p{
+    line-height:1.8;
+    color:#389DE5;
+}
+
+/* 슬로건 */
+
+.video-quote{
+    margin:200px 0 100px;
+    color:#389DE5;
+    font-size: 24px;
+    font-family:"Cafe24 Ohsquare OTF";
+    position:relative;
+    display:inline-block;
+}
+
+.video-quote::before{
+    content:"“";
+    position:absolute;
+    left:-80px;
+    top:-30px;
+    font-size:50px;
+    font-family:"Rubik Spray Paint", cursive;
+}
+
+.video-quote::after{
+    content:"”";
+    position:absolute;
+    right:-80px;
+    bottom:-20px;
+    font-size:50px;
+    font-family:"Rubik Spray Paint", cursive;
+}
+
+/* 하단 영상 리스트 */
+
+.video-list{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+/* Scroll To Top 버튼 */
+
+.scroll-top{
+    position:fixed;
+    right:40px;
+    bottom:40px;
+    font-size:48px;
+    color:#FF6B8A;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s;
+}
+
+/* 보일 때 */
+
+.scroll-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+/* hover 효과 */
+
+.scroll-top:hover{
+    transform:translateY(-6px);
+}
