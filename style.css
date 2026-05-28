@@ -63,7 +63,20 @@ body{
 /* 메인 영상 */
 
 .main-video{
-    padding:40px 0 120px;
+    padding:40px 0 160px;
+}
+
+/* 영상 설명 */
+
+.main-video-text{
+    margin-top:40px;
+    text-align:center;
+    color:#389DE5;
+}
+
+.main-video-text p{
+    font-size:18px;
+    line-height:1.8;
 }
 
 .video-box{
