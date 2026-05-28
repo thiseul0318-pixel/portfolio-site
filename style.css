@@ -69,18 +69,26 @@ body{
 /* 영상 설명 */
 
 .main-video-text{
-    margin-top:50px; /* 영상과 간격 */
+    margin-top:50px;
     text-align:center;
     color:#389DE5;
 
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+
+.main-video-text h2{
+    font-size:32px;
+    margin-bottom:30px;
+    font-family:"Cafe24 Ohsquare OTF";
+    font-weight:normal;
 }
 
 .main-video-text p{
     font-size:18px;
-    line-height:1.8;
-    max-width:700px; /* 너무 길게 퍼지지 않게 */
+    line-height:1.9;
+    max-width:750px;
 }
 
 .video-box{
